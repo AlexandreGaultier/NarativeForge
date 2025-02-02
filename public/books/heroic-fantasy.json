@@ -94,6 +94,92 @@
       "links": [
         { "text": "Remercier Gareth et partir vers le village.", "target": 6 }
       ]
+    },
+    {
+      "num": 11,
+      "title": "Une nuit à l'auberge",
+      "text": "L'aubergiste, une femme robuste nommée Martha, te conduit à une chambre modeste mais propre. « Le repas sera servi dans une heure », dit-elle avec un sourire chaleureux. « Nous avons un ragoût de champignons des montagnes ce soir. Une spécialité locale. »\n\nInstallé près de l'âtre crépitant, tu savoures le repas en écoutant les conversations. Un vieux marchand raconte avoir vu d'étranges lumières dans les ruines au nord. Un chasseur mentionne des disparitions inexpliquées. Et surtout, tu entends parler de la Guilde des Ombres, une organisation mystérieuse qui recruterait des guerriers pour une quête importante...",
+      "links": [
+        { "text": "Interroger discrètement le marchand sur les lumières.", "target": 12 }
+      ]
+    },
+    {
+      "num": 12,
+      "title": "Les récits du marchand",
+      "text": "Le vieux marchand, Théodore, se penche vers toi en baissant la voix. Ses yeux brillent d'un éclat particulier à la lueur des flammes.\n\n« J'ai fait ce trajet des centaines de fois », murmure-t-il en faisant tourner son verre. « Mais la semaine dernière... c'était différent. Les ruines semblaient vivantes. Des lueurs bleues dansaient entre les colonnes, et j'ai entendu... des chants. Anciens. Dans une langue que je ne connaissais pas. »\n\nIl marque une pause, son regard perdu dans les flammes. « Le plus étrange, c'est que depuis, mes rêves sont remplis de symboles. Les mêmes que ceux gravés sur les murs de ton monastère, je parie. »",
+      "links": [
+        { "text": "Lui montrer le parchemin scellé de ton maître.", "target": 13 },
+        { "text": "Le remercier et aller te reposer.", "target": 14 }
+      ]
+    },
+    {
+      "num": 13,
+      "title": "Révélations nocturnes",
+      "text": "Les mains tremblantes de Théodore effleurent le sceau du parchemin. Son visage pâlit. « Par les anciens... », murmure-t-il. « J'ai vu ce symbole dans les ruines. Il y a une salle, tout en bas... J'y suis descendu par curiosité. Sur le mur principal, une fresque représente sept moines formant un cercle. Et au centre... »\n\nUn fracas soudain interrompt sa phrase. La porte de l'auberge s'ouvre violemment, laissant entrer une bourrasque glacée. Une silhouette encapuchonnée se tient dans l'embrasure, son regard fixé sur vous.\n\nThéodore se lève précipitamment. « Ils m'ont retrouvé », souffle-t-il. « Écoute-moi bien : trouve Serra à Pierrevent. Elle connaît le chemin. Mais méfie-toi des... »",
+      "links": [
+        { "text": "Protéger Théodore.", "target": 15 },
+        { "text": "Laisser la situation se dérouler et observer.", "target": 16 }
+      ]
+    },
+    {
+      "num": 14,
+      "title": "Méditation nocturne",
+      "text": "Dans ta chambre, assis en tailleur sur le plancher usé, tu médites comme ton maître te l'a enseigné. Le silence de la nuit n'est troublé que par le crépitement distant du feu et le hululement d'une chouette.\n\nDans cet état de conscience altérée, les paroles du marchand prennent un sens nouveau. Les symboles, les ruines, les lumières... Tout semble connecté à ta quête, comme les fils d'une toile d'araignée brillant sous la rosée du matin.\n\nUn souvenir remonte à la surface : ton maître, parlant d'une prophétie ancienne. « Quand les sept sceaux seront réunis... », avait-il murmuré un soir, pensant que tu dormais.",
+      "links": [
+        { "text": "Continuer ta méditation.", "target": 17 }
+      ]
+    },
+    {
+      "num": 15,
+      "title": "Protection rapprochée",
+      "text": "D'un bond, tu te places entre Théodore et l'intrus. Ton entraînement au monastère prend le dessus : position basse, respiration maîtrisée, esprit calme. La silhouette encapuchonnée marque un temps d'arrêt.\n\n« Un moine guerrier... », murmure une voix féminine sous la capuche. « Intéressant. » D'un geste fluide, elle retire sa capuche, révélant un visage marqué par une cicatrice argentée. « Je suis Serra. Et je ne suis pas là pour blesser Théodore, mais pour le protéger. Comme toi, apparemment. »\n\nThéodore laisse échapper un rire nerveux. « Serra ! Tu aurais pu... entrer normalement ? »",
+      "links": [
+        { "text": "Maintenir ta position défensive et demander des explications.", "target": 18 },
+        { "text": "Te détendre et écouter ce qu'elle a à dire.", "target": 19 }
+      ]
+    },
+    {
+      "num": 16,
+      "title": "Observation silencieuse",
+      "text": "Tu restes immobile, observant la scène se dérouler. La silhouette s'avance dans la salle, et à ta grande surprise, Théodore pousse un soupir de soulagement.\n\n« Serra... J'aurais dû me douter que tu me suivrais. » La silhouette retire sa capuche, révélant une femme au regard perçant. « Les Gardiens sont en mouvement », dit-elle à voix basse. « Ils savent pour les ruines. »\n\nThéodore se tourne vers toi. « Il semblerait que nos chemins devaient se croiser, moine. Serra est... disons, une alliée dans cette quête qui nous dépasse tous. »",
+      "links": [
+        { "text": "Demander plus d'informations sur ces 'Gardiens'.", "target": 20 }
+      ]
+    },
+    {
+      "num": 17,
+      "title": "Visions méditatives",
+      "text": "La méditation s'approfondit. Les images défilent derrière tes paupières closes : sept sceaux brillant d'une lumière intérieure, un cercle de pierre ancien perdu dans les montagnes, un dragon endormi sous la glace...\n\nSoudain, une sensation étrange te parcourt. Dans ton esprit, une voix résonne, ancienne et profonde : « Le temps des sceaux approche. Les Gardiens s'éveillent, mais l'équilibre doit être maintenu. »\n\nLorsque tu ouvres les yeux, l'aube pointe à peine. Sur le mur de ta chambre, les premiers rayons du soleil dessinent exactement le même symbole que celui de ton parchemin.",
+      "links": [
+        { "text": "Descendre prendre ton petit-déjeuner.", "target": 21 },
+        { "text": "Examiner plus attentivement le mur.", "target": 22 }
+      ]
+    },
+    {
+      "num": 18,
+      "title": "Méfiance prudente",
+      "text": "« Les Gardiens ne sont plus ce qu'ils étaient », explique Serra, s'asseyant calmement malgré ta posture défensive. « Ils ont oublié leur véritable mission. La protection des sceaux est devenue... une obsession malsaine. »\n\nElle sort un médaillon de sous sa cape. Le même symbole que ton parchemin y est gravé, mais inversé. « Nous sommes les Veilleurs. Nous observons les Gardiens depuis des siècles. Ton maître... il fait partie des nôtres. »\n\nThéodore hoche la tête. « Les ruines dont je t'ai parlé... Ce n'est pas un hasard si tu es là. Les prophéties parlent d'un moine qui quittera sa montagne au moment crucial. »",
+      "links": [
+        { "text": "Accepter d'écouter leur histoire complète.", "target": 23 },
+        { "text": "Exiger d'abord de voir le parchemin de ton maître ouvert.", "target": 24 }
+      ]
+    },
+    {
+      "num": 19,
+      "title": "Confiance naissante",
+      "text": "Tu relâches ta posture, sentant instinctivement que Serra ne représente pas une menace. Elle s'installe à votre table, commandant trois tasses d'infusion à Martha qui observe la scène avec curiosité.\n\n« Les montagnes gardent bien des secrets », commence Serra en soufflant sur sa tasse fumante. « Mais le plus grand d'entre eux concerne les sept sceaux. » Elle marque une pause, ses yeux scrutant les tiens. « Ton monastère... il n'a pas été construit là-haut par hasard. Il protège l'un d'eux. »\n\nUn frisson te parcourt l'échine. Tu repenses aux zones interdites du monastère, aux rituels nocturnes de ton maître, aux étranges lueurs parfois visibles depuis ta cellule...",
+      "links": [
+        { "text": "Partager tes observations sur les rituels du monastère.", "target": 25 }
+      ]
+    },
+    {
+      "num": 20,
+      "title": "Les Gardiens dévoilés",
+      "text": "Serra s'assied, son regard devenant grave. « Les Gardiens étaient autrefois les protecteurs des sept sceaux sacrés. Chaque sceau maintient... quelque chose d'ancien endormi. Mais avec le temps, certains Gardiens sont devenus avides de pouvoir. Ils ne veulent plus protéger les sceaux, ils veulent les utiliser. »\n\nElle sort une carte usée de sa cape, la dépliant sur la table. Sept points y brillent faiblement, formant une constellation parfaite. L'un d'eux correspond exactement à l'emplacement de ton monastère.\n\n« Ton maître », poursuit-elle, « fait partie des derniers Gardiens fidèles à leur mission originelle. Le parchemin qu'il t'a confié... c'est plus qu'un simple message. C'est une clé. »",
+      "links": [
+        { "text": "Examiner la carte plus en détail.", "target": 26 },
+        { "text": "Demander ce qui se passerait si les sceaux étaient réunis.", "target": 27 }
+      ]
     }
   ]
 }
