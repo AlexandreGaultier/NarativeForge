@@ -1,0 +1,99 @@
+{
+  "chapters": [
+    {
+      "num": 1,
+      "title": "L'appel des cimes",
+      "text": "Le vent glacé fouette ton visage alors que tu descends du temple perché sur la montagne. Tu as passé des années à t'entraîner dans l'isolement, perfectionnant l'art du combat sous la discipline des moines guerriers. Aujourd'hui, ton maître t'envoie accomplir une quête en contrebas, dans la vallée où grouille la civilisation...\n\nUn parchemin scellé dans ta besace, quelques provisions et ton bâton ferré en main, tu es prêt. Mais à peine as-tu posé le pied sur le sentier qu'un grondement sourd résonne derrière toi. Une avalanche !",
+      "links": [
+        { "text": "Tenter d'esquiver l'avalanche en plongeant vers un repli rocheux.", "target": 2 },
+        { "text": "Tenter une descente contrôlée en surfant sur la neige.", "target": 3 }
+      ]
+    },
+    {
+      "num": 2,
+      "title": "L'abri incertain",
+      "text": "Tu bondis vers une saillie rocheuse et t'agrippes de toutes tes forces. La neige s'engouffre, secouant la montagne dans un rugissement blanc. Après plusieurs minutes, le silence retombe. Tu es sauf, mais un craquement derrière toi attire ton attention… Un loup solitaire te fixe, l'écume aux crocs.",
+      "links": [
+        { "text": "Tenter de l'intimider pour l'éloigner.", "target": 4 },
+        { "text": "Le combattre avant qu'il n'attaque.", "target": 5 }
+      ],
+      "events": { "combat": "Loup des montagnes" },
+      "danger": 2
+    },
+    {
+      "num": 3,
+      "title": "Surf imprudent",
+      "text": "Plutôt que de lutter contre la nature, tu décides d'en faire ton alliée. Tu t'élances sur la neige et utilises ton bâton comme gouvernail. Pendant quelques secondes, tu glisses avec fluidité… avant de heurter une pierre dissimulée sous la poudreuse. Tu roules sur plusieurs mètres avant de t'écraser contre un tronc. Aïe.\n\nTu te relèves, légèrement sonné. Mais le temps de retrouver ton équilibre, une silhouette encapuchonnée s'approche. Un brigand.",
+      "links": [
+        { "text": "Lui faire face et se battre.", "target": 6 },
+        { "text": "Tenter de le semer dans la forêt.", "target": 7 }
+      ],
+      "events": { "combat": "Brigand de bas étage" },
+      "danger": 1
+    },
+    {
+      "num": 4,
+      "title": "Regard perçant",
+      "text": "Tu gonfles ta poitrine et fixes le loup droit dans les yeux, espérant qu'il te considère comme un prédateur et non une proie. Un long silence s'installe. Finalement, il grogne et recule lentement avant de disparaître dans l'ombre des sapins.\n\nTu reprends ton souffle et ton chemin, plus bas dans la vallée.",
+      "links": [
+        { "text": "Descendre vers la route commerçante.", "target": 8 },
+        { "text": "Suivre une piste secondaire à travers la forêt.", "target": 9 }
+      ]
+    },
+    {
+      "num": 5,
+      "title": "Duel animal",
+      "text": "Tu n'attends pas que le loup attaque en premier. Tu brandis ton bâton et frappes rapidement, espérant le désarçonner. Ses crocs claquent à quelques centimètres de ton bras avant qu'il ne bondisse de nouveau.",
+      "links": [
+        { "text": "Poursuivre le combat.", "target": 10 }
+      ],
+      "events": { "combat": "Loup des montagnes" },
+      "danger": 2
+    },
+    {
+      "num": 6,
+      "title": "Leçon de combat",
+      "text": "Le brigand sort une dague rouillée et s'approche en ricanant. « Un moine, hein ? J'me demande combien je pourrais vendre ta besace… »\n\nIl ne termine jamais sa phrase. Tu lui bondis dessus, frappant d'un coup rapide.",
+      "links": [
+        { "text": "Poursuivre le combat.", "target": 11 }
+      ],
+      "events": { "combat": "Brigand de bas étage" },
+      "danger": 1
+    },
+    {
+      "number": 7,
+      "title": "Le long de la rivière",
+      "text": "La rivière serpente paisiblement entre les rochers. Ses eaux cristallines reflètent la lumière du soleil, créant des motifs dansants sur les berges. Au loin, tu aperçois un pêcheur solitaire qui semble absorbé dans ses pensées. Il lève la tête à ton approche et te fait un signe amical.\n\n« Les chemins sont dangereux ces temps-ci », dit-il en posant sa canne à pêche. « Si vous cherchez un abri, le village de Pierrevent n'est qu'à une heure de marche en suivant la rivière. Méfiez-vous toutefois des loups au crépuscule. »",
+      "links": [
+        { "text": "Remercier le pêcheur et continuer vers Pierrevent.", "target": 6 },
+        { "text": "S'arrêter pour discuter avec le pêcheur.", "target": 10 }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "L'auberge du Dragon Endormi",
+      "text": "L'auberge du Dragon Endormi est un bâtiment chaleureux aux poutres apparentes. À l'intérieur, quelques villageois discutent autour de leurs chopes, tandis qu'un feu crépite dans l'âtre. L'aubergiste, une femme robuste aux cheveux grisonnants, t'accueille avec un sourire bienveillant.\n\n« Bienvenue, voyageur ! Une chambre pour la nuit coûte 2 pièces d'or, repas compris. À moins que vous ne préfériez simplement vous restaurer ? »",
+      "links": [
+        { "text": "Prendre une chambre (coûte 2 pièces d'or).", "target": 11 },
+        { "text": "Juste boire un verre et écouter les rumeurs.", "target": 12 }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Le temple oublié",
+      "text": "Le temple est une construction modeste mais élégante, dédiée à un ancien ordre de moines-guerriers. En poussant la porte, tu es surpris de découvrir que l'intérieur est parfaitement entretenu. Des bougies illuminent doucement les lieux, et sur l'autel repose un livre ancien. Ton cœur fait un bond quand tu réalises que les symboles gravés sur les murs sont identiques à ceux de ton monastère.\n\nUne voix douce s'élève derrière toi : « Je me demandais quand l'un des vôtres viendrait. »",
+      "links": [
+        { "text": "Te retourner calmement.", "target": 13 },
+        { "text": "Faire volte-face en position de combat.", "target": 14 }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Les conseils du pêcheur",
+      "text": "Le vieil homme pose sa canne et sort une gourde de sa besace. « Je m'appelle Gareth », dit-il en t'offrant une gorgée d'eau fraîche. « J'ai vu bien des choses depuis ma cabane au bord de l'eau. Des marchands, des brigands... et même des membres de la mystérieuse Guilde des Ombres. Ils se réunissent dans une vieille demeure à l'est du village. Si c'est eux que vous cherchez, méfiez-vous. Leurs intentions sont rarement... transparentes. »\n\nIl marque une pause, scrutant l'horizon. « Le soleil descend. Vous devriez vous mettre en route si vous voulez atteindre Pierrevent avant la nuit. »",
+      "links": [
+        { "text": "Remercier Gareth et partir vers le village.", "target": 6 }
+      ]
+    }
+  ]
+}

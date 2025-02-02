@@ -1,0 +1,228 @@
+:root {
+  /* Theme Light */
+  --light-bg-primary: #ffffff;
+  --light-bg-secondary: #f5f5f5;
+  --light-text-primary: #333333;
+  --light-text-secondary: #666666;
+  --light-accent: #646cff;
+  --light-card-bg: #ffffff;
+  --light-card-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --light-border: rgba(0, 0, 0, 0.1);
+
+  /* Theme Dark */
+  --dark-bg-primary: #121212;
+  --dark-bg-secondary: #1e1e1e;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #a0a0a0;
+  --dark-accent: #747bff;
+  --dark-card-bg: #1e1e1e;
+  --dark-card-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --dark-border: rgba(255, 255, 255, 0.1);
+
+  /* Nouvelles variables d'animation */
+  --transition-speed: 0.3s;
+  --hover-lift: translateY(-4px);
+  --card-scale: scale(1.02);
+
+  /* Variables pour les breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  --laptop: 1024px;
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Theme Application */
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app.light {
+  --bg-primary: var(--light-bg-primary);
+  --bg-secondary: var(--light-bg-secondary);
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+  --accent: var(--light-accent);
+  --card-bg: var(--light-card-bg);
+  --card-shadow: var(--light-card-shadow);
+}
+
+.app.dark {
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --accent: var(--dark-accent);
+  --card-bg: var(--dark-card-bg);
+  --card-shadow: var(--dark-card-shadow);
+}
+
+.nav {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-secondary);
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width var(--transition-speed) ease;
+}
+
+.nav-title:hover::after {
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* Navbar styles */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  transition: all var(--transition-speed) ease;
+  background-color: var(--bg-secondary);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-primary);
+  color: var(--accent);
+  transform: var(--hover-lift);
+}
+
+/* Ajout d'un style global pour le scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Style pour la sélection de texte */
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* Navigation responsive */
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-title {
+    font-size: 1.5rem;
+  }
+}
