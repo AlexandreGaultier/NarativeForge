@@ -1,0 +1,492 @@
+.character-sheet, .inventory-sheet {
+  background: var(--bg-secondary);
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  border: 1px solid var(--border);
+  height: 600px; /* Hauteur fixe */
+  overflow-y: auto; /* Scroll si nécessaire */
+}
+
+/* Style du scrollbar */
+.character-sheet::-webkit-scrollbar,
+.inventory-sheet::-webkit-scrollbar {
+  width: 8px;
+}
+
+.character-sheet::-webkit-scrollbar-track,
+.inventory-sheet::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 4px;
+}
+
+.character-sheet::-webkit-scrollbar-thumb,
+.inventory-sheet::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.character-sheet h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.character-sheet h3 {
+  color: var(--text-primary);
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.stats-section, .resources-section, .items-section {
+  margin-bottom: 2rem;
+}
+
+.stat-row, .resource-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.stat-controls, .resource-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-controls button, .resource-controls button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: var(--accent);
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.stat-controls button:hover,
+.resource-controls button:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.stat-controls button svg,
+.resource-controls button svg {
+  width: 12px;
+  height: 12px;
+}
+
+.button-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  font-size: 16px;
+}
+
+.resource-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.resource-bar input[type="range"] {
+  flex: 1;
+  accent-color: var(--accent);
+}
+
+.add-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.add-item input {
+  padding: 0.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 4px;
+}
+
+.add-item button {
+  padding: 0.5rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--bg-primary);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--text-primary);
+}
+
+.item-row button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.item-row button:hover {
+  color: var(--accent);
+}
+
+.hp-row {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hp-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.resource-bar {
+  width: 100%;
+}
+
+.resource-bar input[type="range"] {
+  width: 100%;
+  height: 8px;
+  accent-color: var(--accent);
+  border-radius: 4px;
+}
+
+/* Styles pour les dés */
+.dice-section {
+}
+
+.dice-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.dice {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.dice:hover {
+  transform: translateY(-2px);
+}
+
+.dice:active {
+  animation: doubleRotate 0.25s ease;
+}
+
+@keyframes doubleRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
+
+.roll-button {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.roll-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.roll-button:active {
+  transform: translateY(0);
+}
+
+.gold-row {
+  margin-top: 1.5rem;
+}
+
+.items-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.toggle-form-button {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.toggle-form-button:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.add-item {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fix du centrage des caractères dans les boutons */
+.stat-controls button, 
+.resource-controls button,
+.toggle-form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+
+}
+
+/* Animation de clic pour tous les boutons */
+.stat-controls button::after,
+.resource-controls button::after,
+.toggle-form-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.stat-controls button:active::after,
+.resource-controls button:active::after,
+.toggle-form-button:active::after {
+  transform: scale(2);
+  opacity: 0;
+  animation: ripple 0.4s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Assure que le texte reste au-dessus de l'animation */
+.stat-controls button span,
+.resource-controls button span,
+.toggle-form-button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation de rotation au clic */
+.stat-controls button:active, 
+.resource-controls button:active {
+  animation: doubleRotate 0.4s ease;
+}
+
+@keyframes doubleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(540deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
+
+/* Nouveau style pour le bouton d'ajout d'équipement */
+.add-item-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-item-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: doubleRotate 0.4s ease;
+}
+
+/* Ajustement du chapitre pour même hauteur */
+.chapter {
+  height: 600px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.chapter::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chapter::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 4px;
+}
+
+.chapter::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.stat-value.clickable {
+  cursor: pointer;
+  min-width: 40px;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.stat-value.clickable:hover {
+  background: var(--bg-primary);
+  color: var(--accent);
+}
+
+.stat-input {
+  width: 40px;
+  text-align: center;
+  padding: 2px 4px;
+}
+
+.hp-max-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.hp-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Ajustement pour les nombres à deux chiffres */
+.stat-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 100px;
+  justify-content: center;
+}
+
+/* Style spécifique pour les contrôles de PV */
+.hp-max-controls .stat-controls {
+  min-width: 120px;
+}
+
+.hp-max-controls .stat-value {
+  min-width: 60px;
+} 

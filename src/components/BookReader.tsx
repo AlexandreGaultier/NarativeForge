@@ -1,6 +1,8 @@
 import { FC, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './BookReader.css';
+import CharacterSheet from './CharacterSheet';
+import InventorySheet from './InventorySheet';
 
 interface Chapter {
   num: number;
@@ -52,22 +54,28 @@ const BookReader: FC = () => {
   }
 
   return (
-    <div className="reader">
-      <div className="chapter">
-        <div className="chapter-content">
-          <div className="chapter-text">{currentChapter.text}</div>
+    <div className="reader-container">
+      <div className="reader">
+        <div className="chapter">
+          <div className="chapter-content">
+            <div className="chapter-text">{currentChapter.text}</div>
+          </div>
+          <div className="chapter-choices">
+            {currentChapter.links.map((link, index) => (
+              <button
+                key={index}
+                className="choice-button"
+                onClick={() => goToChapter(link.target)}
+              >
+                {link.text}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="chapter-choices">
-          {currentChapter.links.map((link, index) => (
-            <button
-              key={index}
-              className="choice-button"
-              onClick={() => goToChapter(link.target)}
-            >
-              {link.text}
-            </button>
-          ))}
-        </div>
+      </div>
+      <div className="character-sheets">
+        <CharacterSheet />
+        <InventorySheet />
       </div>
     </div>
   );

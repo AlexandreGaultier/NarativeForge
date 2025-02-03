@@ -16,7 +16,7 @@
   --dark-text-secondary: #a0a0a0;
   --dark-accent: #747bff;
   --dark-card-bg: #1e1e1e;
-  --dark-card-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --dark-card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   --dark-border: rgba(255, 255, 255, 0.1);
 
   /* Nouvelles variables d'animation */
@@ -148,6 +148,7 @@
 .nav-links {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav-link {
@@ -163,10 +164,10 @@
 /* Navbar styles */
 .theme-toggle {
   background: none;
+  background-color: var(--bg-secondary);
   border: none;
   color: var(--text-primary);
   cursor: pointer;
-  padding: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -174,9 +175,8 @@
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   transition: all var(--transition-speed) ease;
-  background-color: var(--bg-secondary);
 }
 
 .theme-toggle:hover {

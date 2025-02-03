@@ -1,0 +1,9 @@
+.inventory-sheet {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  border: 1px solid var(--border);
+}
+
+/* ... Réutiliser les styles existants pour les items ... */ 

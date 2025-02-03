@@ -30,7 +30,7 @@ function App() {
                 onClick={toggleTheme} 
                 className="theme-toggle"
               >
-                {theme === 'dark' ? '☀️ Mode clair' : '🌙 Mode sombre'}
+                {theme === 'dark' ? '☀️' : '🌙'}
               </button>
             </div>
           </div>

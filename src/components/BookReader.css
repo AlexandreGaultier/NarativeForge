@@ -150,4 +150,43 @@
     background-color: var(--accent);
     color: var(--bg-primary);
   }
+}
+
+/* Ajout au CSS existant */
+.reader-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.reader {
+  flex: 1;
+}
+
+.character-sheets {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 1200px) {
+  .reader-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-sheets {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character-sheet,
+  .inventory-sheet {
+    width: 100%;
+  }
 } 
